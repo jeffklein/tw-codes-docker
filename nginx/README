@@ -1,0 +1,9 @@
+NGINX with ssl proxy for invitecodes.net.
+
+Build:
+cd nginx
+tar xvf certs.tar (unpack .pem and .key files)
+sudo docker build -t jklein/nginx-ssl-icn .
+
+Run:
+sudo docker run -p 80:80 -p 443:443 -d jklein/nginx-ssl-icn
